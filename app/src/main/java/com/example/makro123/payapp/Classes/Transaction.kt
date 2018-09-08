@@ -6,9 +6,9 @@ class Transaction {
     private var cardId: Int? = null
     private var trans: String? = null
     private var amount: Double? = null
-    private var pay: Boolean? = null
+    private var pay: Int? = null
 
-    constructor(transactionId: Int?, cardId: Int?, trans: String?, amount: Double?, pay: Boolean?) {
+    constructor(transactionId: Int?, cardId: Int?, trans: String?, amount: Double?, pay: Int?) {
         this.transactionId = transactionId
         this.cardId = cardId
         this.trans = trans
@@ -48,11 +48,11 @@ class Transaction {
         this.amount = amount
     }
 
-    fun isPayment(): Boolean? {
+    fun isPayment(): Int? {
         return this.pay
     }
 
-    fun setPayment(pay: Boolean) {
+    fun setPayment(pay: Int) {
         this.pay = pay
     }
 

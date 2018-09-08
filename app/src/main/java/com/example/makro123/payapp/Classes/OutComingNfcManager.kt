@@ -40,7 +40,6 @@ class OutcomingNfcManager(
     * */
     interface NfcActivity {
         fun getOutcomingMessage(): Card?
-
         fun signalResult()
     }
 }

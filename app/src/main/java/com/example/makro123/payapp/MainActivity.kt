@@ -30,6 +30,7 @@ class MainActivity : AppCompatActivity(), OutcomingNfcManager.NfcActivity {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        // Check for NFC Adapter
         this.nfcAdapter = NfcAdapter.getDefaultAdapter(this) as NfcAdapter
 
         // Data Reading
@@ -159,7 +160,6 @@ class MainActivity : AppCompatActivity(), OutcomingNfcManager.NfcActivity {
 
             // Handle Transaction Activity Display
             cardView.setOnLongClickListener {
-
                 val intent = Intent(context, TrasnactionsActivity::class.java)
                 intent.putExtra("card", card.getCardId())
 
